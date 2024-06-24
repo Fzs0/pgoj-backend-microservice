@@ -35,8 +35,15 @@ spring:
       max-file-size: 10MB
   cloud:
     nacos:
+      # nacos服务发现配置
       discovery:
         server-addr: 127.0.0.1:8848
+  rabbitmq:
+    # 单机部署
+    host: 123.58.209.178
+    port: 5672
+    username: xp
+    password: 123456
 server:
   address: 0.0.0.0
   port: 8103

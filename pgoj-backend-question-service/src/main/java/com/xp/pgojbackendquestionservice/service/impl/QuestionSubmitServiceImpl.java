@@ -16,6 +16,7 @@ import com.xp.pgojbackendmodel.model.enums.QuestionSubmitLanguageEnum;
 import com.xp.pgojbackendmodel.model.enums.QuestionSubmitStatusEnum;
 import com.xp.pgojbackendmodel.model.vo.QuestionSubmitVO;
 import com.xp.pgojbackendquestionservice.mapper.QuestionSubmitMapper;
+import com.xp.pgojbackendquestionservice.rabbitmq.MyMessageProducer;
 import com.xp.pgojbackendquestionservice.service.QuestionService;
 import com.xp.pgojbackendquestionservice.service.QuestionSubmitService;
 import com.xp.pgojbackendserviceclient.service.JudgeFeignClient;
@@ -48,6 +49,9 @@ public class QuestionSubmitServiceImpl extends ServiceImpl<QuestionSubmitMapper,
     @Resource
     @Lazy
     private JudgeFeignClient judgeFeignService;
+
+    @Resource
+    private MyMessageProducer myMessageProducer;
 
     /**
      * 提交题目
@@ -84,10 +88,11 @@ public class QuestionSubmitServiceImpl extends ServiceImpl<QuestionSubmitMapper,
             throw new BusinessException(ErrorCode.SYSTEM_ERROR, "数据插入失败！");
         }
         Long questionSubmitId = questionSubmit.getId();
+        myMessageProducer.sendMessage("judge_exchange", "my_routingKey", String.valueOf(questionSubmitId));
         // 执行判题服务
-        CompletableFuture.runAsync(() -> {
-            judgeFeignService.doJudge(questionSubmitId);
-        });
+//        CompletableFuture.runAsync(() -> {
+//            judgeFeignService.doJudge(questionSubmitId);
+//        });
         return questionSubmitId;
     }
 
