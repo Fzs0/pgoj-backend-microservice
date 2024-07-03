@@ -212,8 +212,7 @@ xiaogeer@xiaogeerdeMacBook-Air pgoj-frontend % npm install openapi-typescript-co
 ```shell
 xiaogeer@xiaogeerdeMacBook-Air pgoj-frontend % openapi --input http://localhost:8101/api//v2/api-docs --output ./generated --client axios
 ```
-
-![image-20240531151122866](/Users/xiaogeer/Library/Application Support/typora-user-images/image-20240531151122866.png)
+<img width="351" alt="image-20240531151122866" src="https://github.com/Fzs0/pgoj-backend-microservice/assets/90031492/3f37efa5-c187-4737-9c46-225bb73690bf">
 
 直接使用生成的 Service 代码, 调用函数发送请求即可, 比如获取登录信息
 
