@@ -10,15 +10,15 @@ npm install -g @vue/cli
 vue create 项目名
 ```
 
-![image-20240528182815853](/Users/xiaogeer/Library/Application Support/typora-user-images/image-20240528182815853.png)
+<img width="792" alt="image-20240528182815853" src="https://github.com/Fzs0/pgoj-backend-microservice/assets/90031492/14f2a63f-f13b-4748-8852-7ab4cecab305">
 
-![image-20240528182903871](/Users/xiaogeer/Library/Application Support/typora-user-images/image-20240528182903871.png)
+<img width="800" alt="image-20240528182903871" src="https://github.com/Fzs0/pgoj-backend-microservice/assets/90031492/8855c3d0-3f2e-4f49-8f64-3a3b8b0f4b3b">
 
-![image-20240528182952180](/Users/xiaogeer/Library/Application Support/typora-user-images/image-20240528182952180.png)
+<img width="729" alt="image-20240528182952180" src="https://github.com/Fzs0/pgoj-backend-microservice/assets/90031492/336d1d8c-31c3-4817-a4fa-78c9801e79f1">
 
 # 在webstorm中开启代码美化插件
 
-![image-20240528185747151](/Users/xiaogeer/Library/Application Support/typora-user-images/image-20240528185747151.png)
+<img width="729" alt="image-20240528185747151" src="https://github.com/Fzs0/pgoj-backend-microservice/assets/90031492/e4d40ffb-fb3b-430d-868d-2ef0741c5054">
 
 # 引入组件Arco Design
 
